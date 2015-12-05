@@ -27,8 +27,15 @@
     <!-- Custom styles for this template -->
     <link href="css/plotmanager-template.css" rel="stylesheet">
 
-    <script src="js/editabletable.js"></script>
-    <link href="css/editabletable.css" rel="stylesheet">
+    <!--<script src="js/editabletable.js"></script>-->
+    <!--<link href="css/editabletable.css" rel="stylesheet">-->
+    <link href="kendoui/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="kendoui/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="kendoui/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="kendoui/styles/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="kendoui/styles/kendo.dataviz.default.min.css" rel="stylesheet">
+
+    <script src="kendoui/js/kendo.all.min.js"></script>
 
     <script>
         $(function () {
@@ -48,273 +55,97 @@
     </ol>
     <div class="col-lg-12">
         <div class="row">
-            <table id="mainTable" class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Nr działki</th>
-                    <th>Nr obrębu</th>
-                    <th>Stan zabezpieczenia</th>
-                    <th>Właściciel</th>
-                    <th>Adres</th>
-                    <th>Nr KW</th>
-                    <th>Powierzchnia</th>
-                    <th>Sposób płatności</th>
-                    <th>Zapłacono: faza developmentu</th>
-                    <th>Do zapłaty: faza developmentu</th>
-                    <th>Do zapłaty: faza budowy</th>
-                    <th>Kwota podpisanych umów PLN / jednorazowo</th>
-                    <th>Kwota podpisanych umów PLN / rok</th>
-                    <th>Kwota umów regularnych PLN - do zapłaty do końca developmentu (przyszłe)</th>
-                    <th>Opłata adiacencka</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">PIOTROWICE</td>
-                    <td align="left">0012</td>
-                    <td align="left">77</td>
-                    <td align="left">EL1N/00012564/0</td>
-                    <td align="left">Adam i Jolanta Linowieccy</td>
-                    <td align="left">Piotrowice</td>
-                    <td align="left">5.73</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">160</td>
-                    <td align="left">0</td>
-                    <td align="left">640</td>
-                    <td align="left">800</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">67</td>
-                    <td align="left">EL1N/00011988/1</td>
-                    <td align="left">Kazimierz Sadowski, Rodzice Władysław, Władysława</td>
-                    <td align="left">Słupnica 18, Biskupiec</td>
-                    <td align="left">159.46</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">3200</td>
-                    <td align="left">0</td>
-                    <td align="left">12800</td>
-                    <td align="left">16000</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">64</td>
-                    <td align="left">EL1N/00012031/</td>
-                    <td align="left">Tomasz Getka</td>
-                    <td align="left">Podlasek 9</td>
-                    <td align="left">0.35</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">11/3</td>
-                    <td align="left">EL1N/00022266/4</td>
-                    <td align="left">TADEUSZ DZIEDZIC, rodzice: LEON, WIKTORIA</td>
-                    <td align="left">Piotrowice (12) 105; Biskupiec</td>
-                    <td align="left">452.03</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">66/2</td>
-                    <td align="left">EL1N/00022797/5</td>
-                    <td align="left">Karol Stefan Kozłowicz, rodzice:Andrzej, Anna,</td>
-                    <td align="left">Wielka Brytania, W72LY Londyn Hanwell, 59 A Town Holm Crescent, Adres do
-                        korespondecji: 13-340 Słupnica 36
-                    </td>
-                    <td align="left">401.97</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">2400</td>
-                    <td align="left">0</td>
-                    <td align="left">9600</td>
-                    <td align="left">12000</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">PIOTROWICE</td>
-                    <td align="left">0012</td>
-                    <td align="left">77</td>
-                    <td align="left">EL1N/00012564/0</td>
-                    <td align="left">Adam i Jolanta Linowieccy</td>
-                    <td align="left">Piotrowice</td>
-                    <td align="left">5.73</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">160</td>
-                    <td align="left">0</td>
-                    <td align="left">640</td>
-                    <td align="left">800</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">67</td>
-                    <td align="left">EL1N/00011988/1</td>
-                    <td align="left">Kazimierz Sadowski, Rodzice Władysław, Władysława</td>
-                    <td align="left">Słupnica 18, Biskupiec</td>
-                    <td align="left">159.46</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">3200</td>
-                    <td align="left">0</td>
-                    <td align="left">12800</td>
-                    <td align="left">16000</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">64</td>
-                    <td align="left">EL1N/00012031/</td>
-                    <td align="left">Tomasz Getka</td>
-                    <td align="left">Podlasek 9</td>
-                    <td align="left">0.35</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">11/3</td>
-                    <td align="left">EL1N/00022266/4</td>
-                    <td align="left">TADEUSZ DZIEDZIC, rodzice: LEON, WIKTORIA</td>
-                    <td align="left">Piotrowice (12) 105; Biskupiec</td>
-                    <td align="left">452.03</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                <tr>
-                    <td height="17" align="left">Biskupiec</td>
-                    <td align="left">SUPNICA</td>
-                    <td align="left">0017</td>
-                    <td align="left">66/2</td>
-                    <td align="left">EL1N/00022797/5</td>
-                    <td align="left">Karol Stefan Kozłowicz, rodzice:Andrzej, Anna,</td>
-                    <td align="left">Wielka Brytania, W72LY Londyn Hanwell, 59 A Town Holm Crescent, Adres do
-                        korespondecji: 13-340 Słupnica 36
-                    </td>
-                    <td align="left">401.97</td>
-                    <td align="left">KABEL SN</td>
-                    <td align="left">służebność przesyłu</td>
-                    <td align="left">EKSP</td>
-                    <td align="left">Raty</td>
-                    <td align="left">2400</td>
-                    <td align="left">0</td>
-                    <td align="left">9600</td>
-                    <td align="left">12000</td>
-                    <td align="left">0</td>
-                    <td align="left"><br></td>
-                    <td align="left"><br></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <nav>
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <div id="grid">
             </div>
         </div>
     </div>
 </div>
+<script type="application/javascript" src="dw-biskupiec.csv.json.js"></script>
 <!-- /.container -->
 <script>
-    $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-    $('#textAreaEditor').editableTableWidget({editor: $('<textarea>')});
+    $(document).ready(function () {
+        $("#grid").kendoGrid({
+            dataSource: {
+                data: products,
+                schema: {
+                    model: {
+                        fields: {
+                            gmina: {type: "string"},
+                            obreb: {type: "string"},
+                            nrobreb: {type: "string"},
+                            nrdzialki: {type: "string"},
+                            nrkw: {type: "string"},
+                            wlasciciel: {type: "string"},
+                            adres: {type: "string"},
+                            powierzchnia: {type: "number"},
+                            typ_inf: {type: "string"},
+                            stan_zabezp: {type: "string"},
+                            weryfikacja: {type: "string"},
+                            sposob_zapl: {type: "string"},
+                            zaplacono_fd: {type: "number"},
+                            do_zaplaty_fd: {type: "number"},
+                            do_zaplaty_fb: {type: "number"},
+                            kwota_umow_pln_jedn: {type: "number"},
+                            kw_um_fc: {type: "number"},
+                            kw_umow_reg: {type: "number"},
+                            oplata_adiacencka: {type: "number"}
+                        }
+                    }
+                },
+                pageSize: 20
+            },
+            height: 450,
+            scrollable: true,
+            sortable: true,
+            filterable: true,
+            pageable: {
+                input: true,
+                numeric: false
+            },
+            columns: [
+                    /*
+                     gmina: {type: "string"},
+                     obreb: {type: "string"},
+                     nrobreb: {type: "string"},
+                     nrdzialki: {type: "string"},
+                     nrkw: {type: "string"},
+                     wlasciciel: {type: "string"},
+                     adres: {type: "string"},
+                     powierzchnia: {type: "number"},
+                     typ_inf: {type: "string"},
+                     stan_zabezp: {type: "string"},
+                     weryfikacja: {type: "string"},
+                     sposob_zapl: {type: "string"},
+                     zaplacono_fd: {type: "number"},
+                     do_zaplaty_fd: {type: "number"},
+                     do_zaplaty_fb: {type: "number"},
+                     kwota_umow_pln_jedn: {type: "number"},
+                     kw_um_fc: {type: "number"},
+                     kw_umow_reg: {type: "number"},
+                     oplata_adiacencka: {type: "number"}
+                     */
+                {field: "gmina", title: "Gmina"},
+                {field: "obreb", title: "Obręb"},
+                {field: "nrobreb", title: "Numer Obrębu"},
+                {field: "nrdzialki", title: "Nr działki"},
+                {field: "nrkw", title: "Nr KW"},
+                {field: "wlasciciel", title: "Właściciel"},
+                {field: "adres", title: "Adres"},
+                {field: "powierzchnia", title: "Powierzchnia"},
+                {field: "typ_inf", title: "Typ infrastruktury"},
+                {field: "stan_zabezp", title: "Stan zabezpieczenia"},
+                {field: "weryfikacja", title: "Weryfikacja stanu zabezpieczenia"},
+                {field: "sposob_zapl", title: "Sposób płatności"},
+                {field: "zaplacono_fd", title: "Zapłacono: faza developmentu"},
+                {field: "do_zaplaty_fd", title: "Do zapłaty: faza developmentu"},
+                {field: "do_zaplaty_fb", title: "Do zapłaty: faza budowy"},
+                {field: "kwota_umow_pln_jedn", title: "Kwota umów PLN - jednorazowo"},
+                {field: "kw_um_fd", title: "Kwota umów PLN - faza construction"},
+                {field: "kw_um_reg", title: "Kwota umów regularnych"},
+                {field: "oplata_adiacencka", title: "Opłata adiacencka"},
+            ]
+        });
+    });
 </script>
 
 </body>
